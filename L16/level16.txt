@@ -1,0 +1,37 @@
+More filtering: [ ; | & ` \ ' " ]
+
+Similar with the backtick (`) enclosing, bash executes comands also
+enclosed in $(...) :
+
+# echo `echo 123`
+123
+# echo $(echo 123)
+123
+
+Command to inject key in:
+"grep -i \"$key\" dictionary.txt"
+
+- we can't insert " because it's filtered. We can insert commands using
+the previous syntax. Test using $(echo ado) as the search term.
+
+1)
+We can search individually each character in the (beginning of )dictionary
+words, using cut, and '^' to specify the grep pattern at the beginning of the
+match:
+
+    ^$(cut -c1-1 < /etc/natas_webpass/natas17)
+
+- then brute-force the numbers in the password, which are not contained in the 
+  dictionary
+
+- and the case of the characters !!  ( the command used is 'grep -i ..' )
+
+Ugly.. we need to find numbers and case of letters!
+  
+2) 
+Bash kung-fu
+Idea: http://seanmurphree.com/blog/?p=364
+Avoid brute-force and find each character of the password individually.
+
+natas17 password:  9HBzt5ljtPAgmaYvNfZ8chZVq50oepsx
+
