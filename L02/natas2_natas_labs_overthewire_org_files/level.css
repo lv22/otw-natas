@@ -1,0 +1,21 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #ccc; PADDING-TOP: 0px
+}
+#viewsource {
+	TEXT-ALIGN: right
+}
+H1 {
+	PADDING-BOTTOM: 5px; FONT-VARIANT: small-caps; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: black; COLOR: white; PADDING-TOP: 5px
+}
+#content {
+	POSITION: relative; PADDING-BOTTOM: 50px; BACKGROUND-COLOR: #fff; MARGIN: 0px auto; PADDING-LEFT: 50px; WIDTH: 500px; PADDING-RIGHT: 50px; PADDING-TOP: 50px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1); box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1)
+}
+#content:before {
+	Z-INDEX: -1; POSITION: absolute; WIDTH: 40%; BOTTOM: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 10px; LEFT: 12px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); -webkit-transform: skew(-5deg) rotate(-5deg); -moz-transform: skew(-5deg) rotate(-5deg); -ms-transform: skew(-5deg) rotate(-5deg); -o-transform: skew(-5deg) rotate(-5deg); transform: skew(-5deg) rotate(-5deg)
+}
+#content:after {
+	Z-INDEX: -1; POSITION: absolute; WIDTH: 40%; BOTTOM: 12px; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 10px; LEFT: 12px; -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); -webkit-transform: skew(-5deg) rotate(-5deg); -moz-transform: skew(-5deg) rotate(-5deg); -ms-transform: skew(-5deg) rotate(-5deg); -o-transform: skew(-5deg) rotate(-5deg); transform: skew(-5deg) rotate(-5deg)
+}
+#content:after {
+	RIGHT: 12px; LEFT: auto; -webkit-transform: skew(5deg) rotate(5deg); -moz-transform: skew(5deg) rotate(5deg); -ms-transform: skew(5deg) rotate(5deg); -o-transform: skew(5deg) rotate(5deg); transform: skew(5deg) rotate(5deg)
+}

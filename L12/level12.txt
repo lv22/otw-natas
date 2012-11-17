@@ -1,0 +1,4 @@
+We can override the extensionof the uploaded file fro mthe hidden field, and 
+upload a php file that will read the next level password.
+
+Next level password is: IGCXqS4x472aoHZYaidvmeoWj2GmuRYz

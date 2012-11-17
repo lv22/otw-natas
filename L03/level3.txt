@@ -1,0 +1,11 @@
+Clue: Not even Google will find...
+
+http://natas3.natas.labs.overthewire.org/robots.txt:
+User-agent: *
+Disallow: /s3cr3t/
+
+http://natas3.natas.labs.overthewire.org/s3cr3t/
+
+http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt:
+natas4:8ywPLDUB2yY2ujFnwGUdWWp8MT4yZrqz
+

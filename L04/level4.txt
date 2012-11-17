@@ -1,0 +1,7 @@
+Access disallowed. 
+You are visiting from "http://natas4.natas.labs.overthewire.org/" while authorized users should come only from 
+"http://natas5.natas.labs.overthewire.org/"
+
+Burp Change Referrer
+
+Access granted. The password for natas5 is V0p12qz30HEUU22dz7CZGHiFk3VdPA9Z 

@@ -1,0 +1,24 @@
+XOR operation:
+Props:
+A ^ (B^C) = (A^B) ^ C
+A^B = B^A
+A^A = 0
+0^A = 0
+
+
+We have A ^ K = R 
+A - initial string (we have - "{\"showpassword\":\"no\",\"bgcolor\":\"#ffffff\"}")
+K - unknown key
+R - resulted encrypted text ( we have - base64decode("ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxZZaAw=")
+
+We have A ^ K = R
+
+==> 
+A ^ (A^K) = A ^ R
+(A^A) ^ K = A ^ R
+0 ^ K = A ^ R
+K = A ^ R 
+==> Key = initial string XOR decoded cookie
+
+After we find the key, re-encrypt another string with showpassword=yes, and modify the cookie, we get the next pass:
+The password for natas12 is sh7DrWKtb8xw9PIMkh8OQsgno6iZnJQu

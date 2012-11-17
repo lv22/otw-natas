@@ -1,0 +1,4 @@
+Intercept cookie: loggedin=1
+
+Access granted. 
+The password for natas6 is mfPYpp1UBKKsx7g4F0LaRjhKKenYAOqU

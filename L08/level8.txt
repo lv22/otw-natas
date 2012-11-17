@@ -1,0 +1,35 @@
+http://natas8.natas.labs.overthewire.org/index-source.html
+
+<?
+
+$encodedSecret = "3d3d516343746d4d6d6c315669563362";
+
+function encodeSecret($secret) {
+    return bin2hex(strrev(base64_encode($secret)));
+}
+
+if(array_key_exists("submit", $_POST)) {
+    if(encodeSecret($_POST['secret']) == $encodedSecret) {
+    print "Access granted. The password for natas9 is <censored>";
+    } else {
+    print "Wrong secret";
+    }
+}
+?>
+
+<form method=post>
+Input secret: <input name=secret><br>
+<input type=submit name=submit>
+</form>
+
+
+Decode in python:
+enc_pass="3d3d516343746d4d6d6c315669563362"
+
+>>> print enc_pass.decode("hex")[::-1]
+
+b3ViV1lmMmtCcQ==
+
+Base64 decoded:  oubWYf2kBq
+
+Access granted. The password for natas9 is sQ6DKR8ICwqDMTd48lQlJfbF1q9B3edT

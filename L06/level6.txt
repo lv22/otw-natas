@@ -1,0 +1,8 @@
+http://natas6.natas.labs.overthewire.org/includes/secret.inc
+
+<?
+$secret = "FOEIUWGHFEEUHOFUOIU";
+?>
+
+Access granted. The password for natas7 is XLoIufz83MjpTrtPvP9iAtgF48EWjicU 
+
